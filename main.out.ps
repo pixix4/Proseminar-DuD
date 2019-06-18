@@ -1,0 +1,16 @@
+%!
+/pdfmark where{pop}
+{/globaldict where{pop globaldict}{userdict}ifelse/pdfmark/cleartomark load put}
+ifelse
+[
+/Title(Titelblatt)
+/Action/GoTo/Dest(title.0)cvn
+/OUT pdfmark
+[
+/Title(Inhaltsverzeichnis)
+/Action/GoTo/Dest(chapter*.2)cvn
+/OUT pdfmark
+[
+/Title(YYY)
+/Action/GoTo/Dest(chapter.1)cvn
+/OUT pdfmark
