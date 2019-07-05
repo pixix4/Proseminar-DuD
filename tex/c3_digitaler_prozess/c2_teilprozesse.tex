@@ -1,2 +1,41 @@
-\section{Digitalisierbarkeit der Teilprozesse (welche Stakeholder entfallen, Prüfungsamt nötig?)}
+\section{Digitalisierbarkeit der Teilprozesse}
 
+Im folgenden Abschnitt gehen wir auf die einzelnen Prozesse im Aktivitätsdiagramm \cref{fig:abbildung} im Abschnitt Stakeholder ein.
+
+\subsection{Ausfüllen des Antrags}
+Dabei nutzen wir den von uns neu erstellten Assistenten, seine Funktionsweise ist unter dem Punkt “Eigenes Formular” (siehe 3.3.2) beschrieben. Er generiert, nach Eingabe der spezifischen Daten, eine allgemeine PDF mit allen Infos zur Anrechnung. Laut Aussage von Herrn Höhne (TU-Dresden) existiert keine Gesetzesgrundlage, die es zwingend erforderlich macht, den Antrag von Hand zu unterschrieben. [3.2-1] Folglich ist es ebenso möglich, die Studien- und Prüfungsleistungen der Studierenden ohne Unterschrift des Studierenden anzurechnen.
+
+\subsection{Zusammenstellung der Nachweise}
+In diesem Teil der Anrechnung gibt es nun die Möglichkeit sämtliche benötigten Nachweise dem Antrag hinzuzufügen. Der Studierende wird anschließend aufgefordert, den Antrag zusammen mit den Nachweisen hochzuladen. Die Dateien werden auf dem Server gespeichert und stehen zur weiteren Bearbeitung zur Verfügung.
+
+\subsection{Kontrolle auf Vollständigkeit}
+Eine rein digitale Kontrolle der eingereichten Dokumente ist nach jetzigem Stand nicht möglich. Um eine solche Kontrolle automatisiert durchführen zu können, müssten alle Dokumente zu den Noten und die Modulbeschreibung in standardisierter,  digitaler Form vorliegen. Allerdings unterscheiden sich die Universitäten stark in der Form, in denen die Dokumente den Studenten ausgehändigt werden. An manchen Universitäten existiert zwar die Möglichkeit zur elektronischen Verifikation der Dokumente bei der Universität, über einen Code [Beispiel der Verifikation an der Universität Göttingen [3.2 - 2]. Im Normalfall unterscheiden sich die Dokumente allerdings zu stark, als das eine Software diese automatisiert einlesen und überprüfen könnte. An anderen Universitäten, gerade auch im asiatischen Raum, liegen des weiteren keine Modulbeschreibungen vor. Zudem gibt es verschiedene Ansätze den Studierenden ihre Leistungen zu bescheinigen. Zum Teil werden Noten für Module in eigenen Dokumenten weitergeleitet. An anderen Universitäten wiederum werden die Noten nur als komplette Liste mit allen Noten des Studierenden bereitgestellt. Zudem kann es vorkommen, dass auch für einzelne Prüfungsleistungen Bescheinigungen vorliegen, ohne dass diese zu einem Modul zusammengefasst sind. Dies ist zum Beispiel bei Sprachprüfungen der Fall. 
+
+\subsection{Bewertung des Antrags/Entscheidung über Anrechnung}
+Dieser Teil ist nur begrenzt digitalisierbar. Der eingereichte Antrag wird über den Server zum Prüfungsausschuss weitergeleitet. Der Ausschuss entscheidet wie gehabt darüber, ob der Antrag abgelehnt oder angenommen wird. Um die Entscheidung zu erleichtern, besteht die Möglichkeit, eine Datenbank mit vorangegangenen Entscheidungen anzulegen und zu pflegen. Aufgrund dieser Basis, kann das System Parallelen zu früheren Entscheidungen suchen und dem Prüfungsausschuss als Empfehlung übermitteln. Während eine solche Datenbank in Studiengängen, wie Maschinenbau, bereits geführt wird, ist dies nach Aussage von Borcea-Pfitzmann wegen zu großer Unterschiede in den Studiengängen und Modulen der Bewerber, für die Informatik an der TU-Dresden nicht umsetzbar.
+Eine maschinelle Entscheidung über einen Antrag zur Anrechnung von Studien- und Prüfungsleistungen aufgrund vorangegangener Entscheidungen zu gleichen Modulen ist prinzipiell auch möglich. Allerdings muss der Studierende vorab und mit der Entscheidung laut Gesetz darüber informiert werden, dass die Entscheidung maschinell getroffen wurde [3.2-3]. Das legt wiederum die Vermutung nahe, dass bei maschinellen Ablehnungen mit einer erhöhten Einspruchsquote zu rechnen ist. Um dies zu vermeiden haben wir uns für den oben beschrieben Lösungsweg entschieden.
+
+\subsection{Eintragung der Ergebnisse (optionaler Weg)}
+Aktuell werden neue Prüfungsergebnisse manuell vom Prüfungsamt eingetragen. In unserem Fall handelt es sich aber um bereits vorhandene Noten, das heißt wir tragen unsere Noten vollständig digital ein. Laut Aussage von Herrn Höhne der TU-Dresden ist dies kein Problem, solange die eingetragenen Noten korrekt sind [3.2-1]. Eine weiterführende rechtliche Recherche ergab dazu keine widersprüchlichen Ergebnisse.
+Hierzu wird eine Schnittstelle von unserem System zu jexam notwendig sein, welche die Noten einträgt. Die Veröffentlichung bzw. Freigabe der Noten wird wiederum wie gehabt vom Prüfungsamt übernommen.
+
+\subsection{Erstellen des Bescheides und Erhalt beim Studierenden}
+Nach Entscheidung des Prüfungsamtes über den jeweiligen Antrag, wird ein Bescheid erstellt. Der Vorgang danach ist nun in beiden Fällen gleich, also egal ob die Anrechnung angenommen oder abgelehnt worden ist. Der erstellte Bescheid wird dem Studierenden an seinen Account geschickt. Außerdem bekommt er, wie bisher, eine Mail mit dem Hinweis, dass sein Antrag auf Anrechnung bearbeitet wurde. Zusätzlich muss der Studierende laut Aussage von Frau Borcea-Pfitzmann auf dem Postweg informiert werden.
+
+\subsection{Widerspruch}
+Der Studierende hat die Möglichkeit gegen die getroffene Entscheidung Widerspruch einzulegen. Da dies einen Rechtsakt darstellt, muss dieser Widerspruch auf postalischem Wege eingereicht werden. Über einen solchen Widerspruch befindet laut Prüfungsordnung [3.4.7-1] der Prüfungsausschuss innerhalb einer angemessenen Frist. Dem Studierenden kann der Bescheid anschließend digital ausgeliefert werden, wie auch schon die Entscheidung an sich, muss dieser aber, um Rechtssicherheit zu gewährleisten, auch auf postalischem Wege an den Studierenden versandt werden.
+
+\subsection{Archivierungsprozess}
+Das Prüfungsamt archiviert alle auf die Studierenden bezogenen Daten wie auch Anträge auf Anrechnung für mindestens zwei Jahre nach Beendigung des Studiums. Danach werden die Akten der Studierenden an das Universitätsarchiv übergeben, welches die Akten bis zu 50 Jahre nach Beendigung des Studiums archiviert. Dabei können die Anträge auf Anrechnung, da sie nur Teil der Restakte sind, nach Absprache nach fünf Jahren „datenschutzgerecht unter Führung eines Kassationsnachweises vernichtet“ werden [3.2.8-1].
+
+
+\subsection{Datenschutzrechtliche Aspekte bei der Digitalisierung}
+Wird der Prozess im ganzen oder auch nur teilweise digitalisiert, sind laut DSGVO einige datenschutzrechtliche Aspekte zu beachten:
+\begin{itemize}
+\item Dem Nutzer müssen auf Anfrage alle von ihm gespeicherten Daten auf seine Nachfrage hin verfügbar gemacht werden [3.2.9-1].
+\item Vor Registrierung des Benutzers muss dieser darüber informiert werden, welche Daten von ihm gespeichert werden, und welche Rechte er hat [3.2.9-2].
+\item Auf Nachfrage des Nutzers muss ihm Auskunft darüber erteilt werden, welche Kategorie Daten von ihm gespeichert werden, zu welchem Zweck diese gespeichert werden und wie lang sie voraussichtlich gespeichert werden [3.2.9-3].
+\item Die Daten des Nutzers müssen auf Nachfrage gelöscht werden, falls diese nicht mehr für die weitere Verarbeitung benötigt werden [3.2.9-4]. Ein Widerspruchsrecht gegen die Verarbeitung der Daten ist jedoch nicht gegeben, da die Anrechnung von Studien- und Prüfungsleistung diesem überwiegt [3.2.9-5].
+\item Die Entscheidung über die Anrechnung der Studien- und Prüfungsleistungen darf nicht ausschließlich maschinell erfolgen. Folglich muss ein Mitarbeiter des Prüfungsausschusses die maschinelle Vorentscheidung zumindest bestätigen [3.2.9-6].
+\item Die Daten der Nutzer müssen hinreichend gesichert sein vor Angriffen und Verlust [3.2.9-7].
+\end{itemize}
