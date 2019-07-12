@@ -1,0 +1,79 @@
+\RequirePackage[ngerman=ngerman-x-latest]{hyphsubst}
+\documentclass[ngerman]{tudscrreprt}
+\usepackage[T1]{fontenc}
+\usepackage{selinput}
+\SelectInputMappings{adieresis={ä},germandbls={ß}}
+\usepackage[defaultsans]{opensans}
+\usepackage{babel}
+\usepackage{csquotes}
+\begin{document}
+
+\chapter{Protokoll des Gesprächs am 04.07.2019 mit dem Datenschutzbeauftragten und IT-Sicherheitsbeauftragten der TU Dresden}
+
+Anwesende Personen: Frau Borcea-Pfitzmann, Herr Syckor, Herr Herber, Luzia, Andreas, Marvin
+
+\section{Frage: Ist eine Unterschrift zur Antragstellung notwendig?}
+
+Es muss jederzeit nachweisbar sein, dass es sich bei dem Antragsteller auch tatsächlich um die betroffene Person handelt. Dies wird üblicherweise mit einer handschriftlichen Unterschrift sichergestellt. Alternativen sind jedoch möglich.
+
+In Streitfragen, wie beispielsweise bei Prüfungsan- und abmeldungen, wurde in der Vergangenheit immer zu Gunsten des Studierenden entschieden, da beispielsweise der Login in jExam mit Username und Passwort nicht eindeutig nachweist, dass die Person selbst gehandelt hat.
+
+Eine mögliche Alternative ist die Signatur über den neuen Personalausweis. Dies hat jedoch keine Praxisanwendung bisher.
+Eine andere Idee ist, sich per Chip zu authentifizieren. Diese Möglichkeit ist jedoch ebenso unsicher, da der Chip abhanden kommen könnte.
+
+Die Chance, dass es in unserem Anwendungsfall zu einer Streitigkeit kommt, ist unwahrscheinlich, da es hier darum geht, Studien- und Prüfungsleistungen anrechnen zu lassen. Im voraussichtlich schlimmsten Falle kommt ein Studierender und beschwert sich, dass er eine unerwünschte Note nicht anrechnen lassen wollte. Folglich kann vorerst auf weitere Authentifizierungsmechanismen verzichtet werden.
+
+Mit der Nutzung des ZIH-Logins können die Stammdaten der Person fix in das Formular eingetragen werden. Diese sollen im Formular nicht mehr änderbar sein.
+
+\section{Frage: Kann der elektronische Studentenausweis an der Stelle genutzt werden?}
+
+Ein solches Feature wird diskutiert, ist jedoch noch nicht implementiert. Die Planung dazu ist bisher aus datenschutzrechtlicher Sicht eine Katastrophe.
+
+Um die Studentenausweis-ID auslesen zu können, wird wiederum ein Lesegerät benötigt.
+Besser geeignet ist hier das Shibboleth-Verfahren.
+
+Man könnte die Antrags-PDF erstellen, diese per Shibboleth mit einem Zeitstempel versehen und die Information eintragen, wer das Dokument wann erstellt hat.
+
+Eine andere Idee ist, es dem Finanzamt nachzuahmen. Sobald man seine Steuererklärung online abgegeben hat, muss man noch eine handschriftlich unterschriebene Erledigungsbestätigung an das Finanzamt senden. Geht das Schreiben nach 30 Tagen nicht beim Prüfungsamt ein, kann der Antrag gelöscht werden. Bis das Schreiben ankommt steht er sozusagen auf der Warteliste.
+
+\section{Frage: Muss der auf den Antrag folgende Bescheid postalisch versendet werden?}
+
+Ja, laut derzeit geltendem Recht muss jeder Rechtsakt auf Papier abgeschlossen werden. Da der Studierende das Recht hat, dem Bescheid zu widersprechen, handelt es sich hierbei ebenfalls um einen Rechtsakt.
+
+An der TU Dresden gab es Überlegungen, etwas ähnliches zu digitalisieren. Frau Dünnefeld aus SG 8.4 war dafür verantwortlich und weiß mehr darüber. Das Verfahren war sehr aufwendig und ist deshalb nicht umgesetzt worden. Es wird dazu eine qualifizierte elektronische Signatur benötigt und bei der Zustellung müssen die Daten verschlüsselt werden. Dann muss noch die Frage geklärt werden, ob der Empfänger damit erreicht wurde. Konkret würde das bedeuten, der Studierende erhält eine Mail in der steht, dass der Antrag bearbeitet wurde. Die Entscheidung kann er darauf hin im Online-Portal abrufen. Diese Funktionalität müsste jedoch von CampusNet umgesetzt werden. Damit ist nicht zu rechnen.
+
+\section{Gegenfrage: Lässt sich der Prüfungsausschuss auf den digitalisierten Prozess ein?}
+
+Da wir uns an der Fakultät Informatik befinden, gehen wir davon aus, dass das digitalisierte Verfahren angenommen wird.
+
+\section{Frage: Muss die Replikation der Daten und damit ein Missbrauch seitens der Universitätsmitarbeiter verhindert werden?}
+
+Das liegt nicht in unserer Hand. Es handelt sich dabei um ein organisatorisches Problem. Das Fehlverhalten von Personen ist hier nicht abdeckbar. Die Mitarbeiter der TU Dresden sind verpflichtet, mit den Daten sorgsam umzugehen.
+
+Hierbei stellt sich die Frage, ob eine explizite Exportfunktion überhaupt notwendig ist.
+
+\section{Gegenfrage: Wie ist der Umgang mit wechselnden Prüfungsausschuss-Mitgliedern?}
+
+Der Zugriff muss entzogen werden.
+
+Es wird ein Rollen- und Rechtekonzept benötigt. Das hilft bei der Übergabe, die Übersicht über Berechtigungen zu behalten und schafft klare Strukturen.
+
+Das Rollen- und Rechtekonzept aus Promovendus wird uns als Beispiel zur Verfügung gestellt.
+
+Es existiert ein SHK-Pilot, welcher einen ähnlichen Ablauf hat, wie unser Programm. Das könnte ein besseres Beispiel darstellen, als Promovendus. Es ist nicht bekannt, ob das Programm aktuell läuft. Frau Uhlig oder Frau Leonardi wissen vermutlich mehr darüber.
+
+\section{Frage: Was ändert sich bei der Archivierung der Daten?}
+
+Laut §18 in der Personenverordnung der TU Dresden müssen personenbezogene Daten zum frühestmöglichen Zeitpunkt gelöscht werden.
+
+Dem Universitätsarchiv müssen die Daten zuvor angeboten werden. Dieses entscheidet danach über die Archivwürdigkeit der Daten. Nach der Übergabe der archivwürdigen Daten werden diese gelöscht. Bei der Datenvernichtung wird dazu ein Kassationsprotokoll erstellt.
+
+Nach der Exmatrikulation eines Studierenden und Ablauf der Widerrufsfrist müssen die Daten gelöscht werden. Unser System weiß jedoch nicht, wann dies der Fall ist. Folglich müssen wir die Information vom Immatrikulationsamt erfahren. Möglicherweise erhalten wir die Informationen über IDM, Selma oder CampusNet.
+
+\section{Weitere Diskussion}
+
+Accounting, also die Umsetzung eines Online-Portals mit Login, erhöht die Sicherheitsanforderungen enorm gegenüber eine Fire \& Forget Lösung. Bei letzterem ist ein Angriff von außen nicht so einfach möglich, die Daten nicht sichtbar gemacht werden für den Nutzer und sobald er diese absendet, sind sie nicht mehr präsent. Muss der Studierende etwas nachreichen, kann er dies per Mail tun oder postalisch. Es ist also zu überlegen, ob die Fire \& Forget Variante eine sinnvolle Alternative darstellt.
+
+\chapter{E-Mail}
+
+\end{document}
